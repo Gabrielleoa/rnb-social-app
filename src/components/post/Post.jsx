@@ -16,9 +16,12 @@ export default function Post(){
                     </div>
                 <div className="postCenter">
                     <span className="postText">Inspiration today!😂🙃</span>
-                    <img className="postImg"src="https://i.redd.it/ukpwi2dp4jo61.jpg" alt="" />
+                    {/* <img className="postImg"src="https://news.jazzline.com/tjl/uploads/2013/11/simpsons-lisa-saxophone.jpg" alt="" /> */}
                 </div>
-                <div className="postBottom"></div>
+                <div className="postBottom">
+                    <div className="postBottomLeft"></div>
+                    <div className="postBottomRight"></div>
+                </div>
                 </div>
             </div>
 

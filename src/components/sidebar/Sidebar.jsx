@@ -3,9 +3,8 @@ import "./Sidebar.css";
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import EventIcon from '@mui/icons-material/Event';
-import SchoolIcon from '@mui/icons-material/School';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -39,20 +38,12 @@ function Sidebar(){
                         <span className="sidebarListItemText">Questions</span>
                     </li>
                     <li className="sidebarListItem">
-                        <HelpOutlineIcon  className="sidebarIcon"/>
-                        <span className="sidebarListItemText">Questions</span>
-                    </li>
-                    <li className="sidebarListItem">
-                        <WorkOutlineIcon  className="sidebarIcon"/>
-                        <span className="sidebarListItemText">Jobs</span>
+                        <FavoriteIcon  className="sidebarIcon"/>
+                        <span className="sidebarListItemText">Favorites</span>
                     </li>
                     <li className="sidebarListItem">
                         <EventIcon  className="sidebarIcon"/>
                         <span className="sidebarListItemText">Events</span>
-                    </li>
-                    <li className="sidebarListItem">
-                        <SchoolIcon  className="sidebarIcon"/>
-                        <span className="sidebarListItemText">Education</span>
                     </li>
 
                 </ul>
