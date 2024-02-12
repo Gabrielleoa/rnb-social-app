@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import './register.css'
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from '/Users/gabrielleodhiambo/Development/personal/social-media-app/src/api/axios.js';
+import axios from './axios.js';
 import { Link } from 'react-router-dom';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
@@ -103,8 +103,8 @@ const Register = () => {
                             <FontAwesomeIcon icon={faTimes} className={validName || !user ? "hide" : "invalid"} />
                         </label>
                         <input
-                            type="email"
-                            id="email"
+                            type="username"
+                            id="username"
                             ref={userRef}
                             onChange={(e) => setUser(e.target.value)}
                             value={user}
@@ -114,7 +114,7 @@ const Register = () => {
                             onFocus={() => setUserFocus(true)}
                             onBlur={() => setUserFocus(false)}
                             className="registerInput"
-                            placeholder="Enter Email"
+                            placeholder="Username"
                         />
                         <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
                             <FontAwesomeIcon icon={faInfoCircle} />
@@ -170,7 +170,7 @@ const Register = () => {
                             Must match the first password input field.
                         </p>
 
-                        <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        <button disabled={!validName || !validPwd || !validMatch ? true : false} type="submit">Sign Up</button>
                     </form>
                     <p>
                         Already registered?<br />
