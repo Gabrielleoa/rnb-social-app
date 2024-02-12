@@ -1,5 +1,6 @@
 import "./post.css"
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import axios from 'axios'
 
 export default function Post({post}){
     console.log(post); 
@@ -16,7 +17,9 @@ export default function Post({post}){
                         <MoreVertIcon/>
                     </div>
                 <div className="postCenter">
-                    <span className="postText">Inspiration today!😂🙃</span>
+                    <span className="postText">
+                        
+                    </span>
                     {/* <img className="postImg"src="https://news.jazzline.com/tjl/uploads/2013/11/simpsons-lisa-saxophone.jpg" alt="" /> */}
                 </div>
                 <div className="postBottom">

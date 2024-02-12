@@ -28,8 +28,10 @@ export default function Share() {
                     <RoomIcon htmlColor='SlateBlue' className='shareIcon'/>
                     <span className='shareOptionText'>Location</span>
                   </div>
+                  <div>
+                  <button className="shareButton">Share</button>
+                  </div>
                 </div>
-                <button className="shareButton">Share</button>
       </div>
     </div>
   )
