@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect, url_for, render_template, session
+from flask import Flask, Blueprint, request, jsonify, redirect, url_for, render_template, session
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
 import sqlite3
@@ -10,6 +10,7 @@ from models import User,  Posts, Comment, db
 app = Flask(__name__)
 app.secret_key = '12345'
 
+api = Blueprint('api', __name__)
 # @app.route("/")
 # def hello_world():
 #     return "<p>Hello, welcome to the login page</p>"
@@ -24,6 +25,13 @@ app.secret_key = '12345'
 #         "id":"1",
 #         "email": "gabrielle@email.com"
 #     })
+@api.route('/users', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    user_data = [{'id': user.id, 'username': user.username} for user in users]
+    return jsonify(user_data)
+
+
 @app.route("/login", methods=["GET","POST"])
 def login():
       if request.method == 'POST':
