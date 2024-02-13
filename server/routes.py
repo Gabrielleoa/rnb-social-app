@@ -1,15 +1,15 @@
-# routes.py
-from flask import Blueprint
-from .controllers import user_controller, doghouse_controller, review_controller
+# # routes.py
+# from flask import Blueprint
 
-api = Blueprint('api', __name__)
 
-# User routes
-api.add_url_rule('/users', view_func=user_controller.get_users, methods=['GET'])
+# api = Blueprint('api', __name__)
 
-# DogHouse routes
-api.add_url_rule('/doghouses', view_func=doghouse_controller.get_doghouses, methods=['GET'])
+# # User routes
+# api.add_url_rule('/users', view_func=user_controller.get_users, methods=['GET'])
 
-# Review routes
-api.add_url_rule('/reviews', view_func=review_controller.create_review, methods=['POST'])
+# # DogHouse routes
+# api.add_url_rule('/doghouses', view_func=doghouse_controller.get_doghouses, methods=['GET'])
+
+# # Review routes
+# api.add_url_rule('/reviews', view_func=review_controller.create_review, methods=['POST'])
 

@@ -1,12 +1,12 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from sqlalchemy.sql import func
-from sqlalchemy.orm import DeclarativeBase
+# from sqlalchemy.orm import DeclarativeBase
 
-class Base(DeclarativeBase):
-    pass
+# class Base(DeclarativeBase):
+#     pass
 
-db= SQLAlchemy(Base)
+db= SQLAlchemy()
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -29,4 +29,4 @@ class Comment(db.Model):
     posts_id= db.Column(db.Integer, db.ForeignKey('posts.id'), nullable=False)
     user = db.relationship('User', backref=db.backref('posts'))
     posts= db.relationship("Posts", backref=db.backref('comments'))
-    date = db.Column(db.DateTime(timezone=True), default=func.now())
+    
